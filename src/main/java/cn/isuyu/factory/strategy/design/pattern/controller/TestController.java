@@ -18,6 +18,12 @@ public class TestController {
     @Autowired
     private StrategyFactory strategyFactory;
 
+    /**
+     * 根据参数选择相应的策略
+     * add reduce
+     * @param type
+     * @return
+     */
     @RequestMapping(value = "/{type}")
     public String doInvoke(@PathVariable("type")String type) {
         System.out.println(type);
